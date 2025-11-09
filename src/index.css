@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  @keyframes slideInLeft {
+    from {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slideInRight {
+    from {
+      opacity: 0;
+      transform: translateX(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
+
+/* ======================================================= */
+/* ====== CÓDIGO DA BORDA GIRATÓRIA (NEON) ====== */
+/* ======================================================= */
+
+/* 1. Keyframes para a rotação */
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 2. A classe 'wrapper' que vamos aplicar no React */
+@layer utilities {
+  .animated-border-wrapper {
+    position: relative;
+    /* O padding é a espessura da nossa borda */
+    padding: 6px; 
+    /* Sincronizar com rounded-xl (0.75rem) */
+    border-radius: 0.8rem; 
+    overflow: hidden;
+  }
+
+  /* 3. O gradiente giratório (fica ATRÁS) */
+  .animated-border-wrapper::before {
+    content: '';
+    position: absolute;
+    z-index: -2; /* Atrás de tudo */
+    left: -50%;
+    top: -50%;
+    width: 200%;
+    height: 200%;
+    
+    /* O gradiente cônico que "gira" */
+    background-image: conic-gradient(
+      transparent,
+      transparent,
+      transparent,
+      #34d399, /* Cor emerald-400 (verde neon) */
+      #34d399,
+      transparent,
+      transparent
+    );
+    
+    /* Aplicando a animação de giro */
+    animation: spin 4s linear infinite;
+  }
+
+  /* 4. Uma "máscara" de fundo */
+  /* Isso cobre o gradiente e age como o fundo
+     para o card que vem por cima. */
+  .animated-border-wrapper::after {
+    content: '';
+    position: absolute;
+    z-index: -1; /* Na frente do gradiente, atrás do card */
+    left: 6px;
+    top: 6px;
+    right: 6px;
+    bottom: 6px;
+    /* Cor do fundo da página (nosso bg-slate-900) */
+    background-color: #080c14; 
+    /* Sincronizar com rounded-xl */
+    border-radius: 0.75rem; 
+  }
+}
+
+.card-hero {
+  border-radius: 10px;
+  border-style: solid;
+}
+
+.card-image {
+  height: 200px;
+}
+
+/* ======================================================= */
+/* ====== ESTILOS CUSTOMIZADOS DO SWIPER (SLIDER) ====== */
+/* ======================================================= */
+
+/* Cor das setas de Navegação (Próximo/Anterior) */
+.swiper-button-next,
+.swiper-button-prev {
+  /* Usando a cor emerald-400 */
+  color: #34d399 !important; 
+}
+
+/* Cor da "bolinha" de Paginação (Ativa) */
+.swiper-pagination-bullet-active {
+  background: #34d399 !important;
+}
+
+/* Cor das "bolinhas" inativas */
+.swiper-pagination-bullet {
+  background: #f1f5f9; /* slate-100 */
+  opacity: 0.5;
+}
