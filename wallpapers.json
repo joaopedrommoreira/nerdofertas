@@ -2,17 +2,40 @@
   "versao": 1,
   "wallpapers": [
     {
-      "id": "praia01",
-      "arquivo": "wallhaven-47x8gy.jpg",
-      "url": "https://w.wallhaven.cc/full/47/wallhaven-47x8gy.jpg",
+      "id": "vampiregirl",
+      "arquivo": "wallhaven-e87e98.png",
+      "url": "https://w.wallhaven.cc/full/e8/wallhaven-e87e98.png",
       "ativo": true
     },
     {
       "id": "montanha01",
-      "arquivo": "vqqwgm.jpg",
-      "url": "https://th.wallhaven.cc/small/vq/vqqwgm.jpg",
+      "arquivo": "wallhaven-o53p2m.png",
+      "url": "https://w.wallhaven.cc/full/o5/wallhaven-o53p2m.png",
+      "ativo": true
+    },
+    {
+      "id": "montanha01",
+      "arquivo": "wallhaven-p9yy39.png",
+      "url": "https://w.wallhaven.cc/full/p9/wallhaven-p9yy39.png",
+      "ativo": true
+    },
+    {
+      "id": "montanha01",
+      "arquivo": "wallhaven-we2jw6.png",
+      "url": "https://w.wallhaven.cc/full/we/wallhaven-we2jw6.png",
+      "ativo": true
+    },
+    {
+      "id": "montanha01",
+      "arquivo": "wallhaven-7peyry.jpg",
+      "url": "https://w.wallhaven.cc/full/7p/wallhaven-7peyry.jpg",
+      "ativo": true
+    },
+    {
+      "id": "montanha01",
+      "arquivo": "wallhaven-47zy7v.jpg",
+      "url": "https://w.wallhaven.cc/full/47/wallhaven-47zy7v.jpg",
       "ativo": true
     }
   ]
 }
-
