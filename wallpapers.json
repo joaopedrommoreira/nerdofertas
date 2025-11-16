@@ -1,0 +1,17 @@
+{
+  "versao": 1,
+  "wallpapers": [
+    {
+      "id": "praia01",
+      "arquivo": "praia01.jpg",
+      "url": "https://w.wallhaven.cc/full/47/wallhaven-47x8gy.jpg",
+      "ativo": true
+    },
+    {
+      "id": "montanha01",
+      "arquivo": "montanha01.png",
+      "url": "https://th.wallhaven.cc/small/vq/vqqwgm.jpg",
+      "ativo": true
+    }
+  ]
+}
